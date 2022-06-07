@@ -58,31 +58,31 @@ async def _human_time_duration(seconds):
 async def start_(client: Client, message: Message):
     await message.reply_sticker("CAACAgQAAxkBAAI8bmKIvgnlJyCrq9HIxSvCZCbm5CEjAAIaEAACpvFxHg-Z648-SCRWJAQ")
     await message.reply_text(
-        f"""● **Salam 🙋🏻‍♀️ {message.from_user.mention()} **\n
-● **Mən səsli söhbətlərdə musiqi botuyam 🥰**
+        f"""● **Salam 🐊 {message.from_user.mention()} **\n
+● **Mən @BanditosQrup'u üçün hazırlanmış musiqi botuyam.**
 
-● **Hər hansı bir problemlə qarşılaşsanız qrupumuza gəlib yaza bilərsiniz!**
+● **Bot Yalnız @BanditosQrup'u üçün hazırlanıb.**
 
-● **📚 Əmrlər butona basıb bütün əmrləri öyrənin ⬇️**
+● **⚜️ Kayfa Əmrlərə bax**
 """,
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "Məni qrupa əlavə et 🥳",
-                        url=f"https://t.me/Bayramova_Music_Bot?startgroup=true",
+                        "Onsuz Qrupa əlavə eliyəmmiyəcəysən 😒😂",
+                        url=f"https://t.me/BanditosMusiqiBot?startgroup=true",
                     )
                 ],
                 [
                     InlineKeyboardButton("📚 Əmrlər", callback_data="cbcmds"),
-                    InlineKeyboardButton("😍 Sahibim", url=f"https://t.me/Rahid_2003"),
+                    InlineKeyboardButton("😍 Sahibim", url=f"https://t.me/HusuSovetski"),
                 ],
                 [
                     InlineKeyboardButton(
-                        "💬 Söhbət Qrupu", url=f"https://t.me/Dark_Region"
+                        "🕊️ Söhbət Qrupu", url=f"https://t.me/BanditosQrup"
                     ),
                     InlineKeyboardButton(
-                        "🥰 Kanalım", url=f"https://t.me/Rahid_44"
+                        "🪐 Kanalım", url=f"https://t.me/BanditosBlog"
                     ),
                 ],
             ]
@@ -103,15 +103,15 @@ async def alive(c: Client, message: Message):
     keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("📣 Dəstək", url=f"https://t.me/Dark_Region"),
+                InlineKeyboardButton("✨ Qrup", url=f"https://t.me/BanditosQrup"),
                 InlineKeyboardButton(
-                    "🗯️ Məlumat", url=f"https://t.me/Rahid_44"
+                    "🖤 Sahib", url=f"https://t.me/HusuSovetski"
                 ),
             ]
         ]
     )
 
-    alive = f"**• Salam {message.from_user.mention()} {BOT_NAME}**\n\n🧑🏼‍💻 Sahibim: [{ALIVE_NAME}](https://t.me/{OWNER_NAME})\n👾 Bot versiyası: `v{__version__}`\n🔥 Pragram versiyası: `{pyrover}`\n🐍 Python versiyası: `{__python_version__}`\n✨ PyTgCalls versiyası: `{pytover.__version__}`\n🆙 İşləmək durumu: `{uptime}`\n\n❤ **Məni qrupa əlavə etdiyiniz üçün təşəkkürlər 😍**"
+    alive = f"**• Salam {message.from_user.mention()} {BOT_NAME}**\n\n🧑🏼‍💻 Sahibim: [{ALIVE_NAME}](https://t.me/{OWNER_NAME})\n👾 Bot versiyası: `v{__version__}`\n🔥 Pragram versiyası: `{pyrover}`\n🐍 Python versiyası: `{__python_version__}`\n✨ PyTgCalls versiyası: `{pytover.__version__}`\n🆙 İşləmək vaxtı: `{uptime}`\n\n❤ **Sahib @HusuSovetski 🤍**"
 
     await c.send_photo(
         chat_id,
@@ -164,17 +164,17 @@ async def new_chat(c: Client, m: Message):
     for member in m.new_chat_members:
         if member.id == bot_id:
             return await m.reply(
-                "**❤️ Məni qrupa əlavə etdiyiniz üçün təşəkkürlər 🥰!**\n\n"
-                "**Məni qrupda admin et sonra  /katil əmr ilə Asistanı qrupa dəvət edin . . !\n\n**"
+                "**🌹 Məni qrupa əlavə etdiyiniz üçün təşəkkürlər 🥰!**\n\n"
+                "**Məni qrupda admin elə sonra Hüsüyə dinən asistantı qrupa gətirəcəy . . !\n\n**"
                 "**Bütün bunları etdikdən sonra  /reload Əmri istifadə edin və hərşey hazır ! Botu istifadə edə bilərsiniz 🥰**",
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
-                            InlineKeyboardButton("📣 Məlumat", url=f"https://t.me/Rahid_44"),
-                            InlineKeyboardButton("🗯️ Dəstək", url=f"https://t.me/Dark_Region")
+                            InlineKeyboardButton("⚡ Qrup", url=f"https://t.me/BanditosQrup"),
+                            InlineKeyboardButton("🦅 Sahib", url=f"https://t.me/HusuSovetski")
                         ],
                         [
-                            InlineKeyboardButton("🎙 Asistan", url=f"https://t.me/Rahid_Asistan")
+                            InlineKeyboardButton("🎙 Asistant", url=f"https://t.me/BanditosMusicAsistant")
                         ]
                     ]
                 )
