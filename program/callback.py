@@ -19,11 +19,11 @@ async def cbstart(_, query: CallbackQuery):
     await query.answer("home start")
     await query.edit_message_text(
         f"""● **Salam [{query.message.chat.first_name}](tg://user?id={query.message.chat.id}) **\n
-● **Mən səsli söhbətlərdə musiqi botuyam 🥰**
+● **Mən @BanditosQrup'u üçün hazırlanmış musiqi botuyam 🎶**
 
-● **Hər hansı problemlə qarşılaşsanız qrupumuza gəlib bildirə bilərsiniz!**
+● **Bu Bot @BanditosQrup üçün hazırlandığı üçün heç bir qrupda oxuması mümkün deyil)**
 
-● **📚 Əmrlər butonuna klikləyib bütün əmrləri öyrənin ⬇️**""",
+● **⚜️ Kayfa əmrlər butonuna baxa bilərsən ⬇️**""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -101,20 +101,19 @@ async def cbbasic(_, query: CallbackQuery):
     await query.edit_message_text(
         f"""📚 **Əsas əmrlər :
 
-» /bul => Musiqi yüklə.
-» /ara => Video yüklə.
-» /oynat => Musiqi oynat.
-» /izlet => Video oynat.
+» /song => Musiqi yüklə.
+» /song => Video yüklə.
+» /play => Musiqi oynat.
+» /vplay => Video oynat.
 
-» /durdur => Musiqi dayandır.
-» /devam => Musiqi davam et.
-» /atla => Musiqi keçin.
+» /end => Musiqi dayandır.
+» /resume => Musiqi davam et.
+» /skip => Musiqi keçin.
 » /son => Musiqi dayandır.
 » /lyrics => Mahnı sözlərini tap.
 » /reload => Admin siyahısı yenilə.
-» /katil => Asistanı qrupa dəvət et.
 
-» /voynat ( Link ) => Radio və Film kimi canlı asistanı oynat.
+» /vplay ( Link ) => Radio və Film kimi canlı asistanı oynat.
 
 » /playlist => Musiqi playlistə əlavə et.
 
@@ -135,20 +134,19 @@ async def cbadmin(_, query: CallbackQuery):
     await query.edit_message_text(
         f"""📚 **Əsas əmrlər :
 
-» /bul => Musiqi yüklə.
-» /ara => Video yüklə.
-» /oynat => Musiqi oynat.
-» /izlet => Video oynat.
+» /song => Musiqi yüklə.
+» /song => Video yüklə.
+» /play => Musiqi oynat.
+» /vplay => Video oynat.
 
-» /durdur => Musiqi dayandır.
-» /devam => Musiqi davam et.
-» /atla => Musiqi keçin.
-» /son => Musiqi dayandır.
+» /end => Musiqi dayandır.
+» /resume => Musiqi davam et.
+» /skip => Musiqi keçin.
+» /end => Musiqi dayandır.
 » /lyrics => Mahnı sözlərini tap.
 » /reload => Admin siyahısı yenilə.
-» /katil => Asistanı qrupa dəvət et.
 
-» /voynat ( Link ) => Radio və Film kimi canlı asistanı oynat.
+» /vplay ( Link ) => Radio və Film kimi canlı asistanı oynat.
 
 » /playlist => Musiqi playlistə əlavə et.
 
@@ -177,7 +175,6 @@ async def cbsudo(_, query: CallbackQuery):
 » /info => Bot məlumatlarını öyrən.
 » /restart => Botu yenidən başlat.
 » /update => Botu yenilə.
-» /hiz => Botun sürətini öyrən.
 » /ping => Botun pingi göstərir.
 » /uptime => Canlı məlumatları göstərir.
 » /alive => Botun işləmək məlumatını göstərir.
@@ -200,7 +197,7 @@ async def cbmenu(_, query: CallbackQuery):
     chat = query.message.chat.title
     if chat_id in QUEUE:
           await query.edit_message_text(
-              f"⚙️ **Settings of** {chat}\n\n⏸ : akışı duraklat\n▶️ : akışı devam ettir\n🔇 : asistanı sessize al\n🔊 : asistanın sesini aç\n⏹ : akışı durdur",
+              f"⚙️ **Settings of** {chat}\n\n⏸ : Mahnını dayandır\n▶️ : Mahnını davam etdir\n🔇 : Asistantı səssizə al\n🔊 : Asistantın səsini aç\n⏹ : Mahnını dayandır",
               reply_markup=InlineKeyboardMarkup(buttons),
           )
     else:
